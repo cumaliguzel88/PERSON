@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activty_main_nav"
+    app:startDestination="@id/anasayfaFragment2">
+    <fragment
+        android:id="@+id/anasayfaFragment2"
+        android:name="com.cumaliguzel.person.UI.fragment.AnasayfaFragment"
+        android:label="fragment_anasayfa"
+        tools:layout="@layout/fragment_anasayfa" >
+        <action
+            android:id="@+id/gecisKayit"
+            app:destination="@id/kisiKayitFragment" />
+        <action
+            android:id="@+id/gecisKisiDetay"
+            app:destination="@id/kisiDetayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kisiKayitFragment"
+        android:name="com.cumaliguzel.person.UI.fragment.KisiKayitFragment"
+        android:label="fragment_kisi_kayit"
+        tools:layout="@layout/fragment_kisi_kayit" >
+        <argument
+            android:name="a"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/kisiDetayFragment"
+        android:name="com.cumaliguzel.person.UI.fragment.KisiDetayFragment"
+        android:label="fragment_kisi_detay"
+        tools:layout="@layout/fragment_kisi_detay" >
+        <argument
+            android:name="kisi"
+            app:argType="com.cumaliguzel.person.Data.entity.Kisiler" />
+    </fragment>
+</navigation>
